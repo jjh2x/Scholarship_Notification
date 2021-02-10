@@ -3,12 +3,8 @@ package com.example.sn_test
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.example.sn_test.Adpater.MainFragmentStatePAgerAdapter
-import com.example.sn_test.Fragment.MainRvAdapter
-import com.example.sn_test.Fragment.ScholarshipSummary
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {

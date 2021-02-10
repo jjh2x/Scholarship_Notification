@@ -14,28 +14,27 @@
             android:id="@+id/detail"
             android:layout_width="181dp"
             android:layout_height="32dp"
+            android:layout_marginTop="28dp"
             android:text="장학금 정보 세부사항"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintHorizontal_bias="0.042"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.453" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="342dp"
-            android:layout_height="259dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="27dp"
-            android:background="@android:drawable/divider_horizontal_dark"
+            android:layout_width="316dp"
+            android:layout_height="227dp"
+            android:background="@drawable/shape_rectangle"
             android:orientation="vertical"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail">
+            app:layout_constraintTop_toBottomOf="@+id/detail"
+            app:layout_constraintVertical_bias="0.44">
 
             <TextView
                 android:id="@+id/detail_deadline"
@@ -111,15 +110,15 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="342dp"
-            android:layout_height="269dp"
-            android:background="@android:drawable/divider_horizontal_dark"
+            android:layout_width="311dp"
+            android:layout_height="210dp"
+            android:background="@drawable/shape_rectangle"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.802">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/time_set"

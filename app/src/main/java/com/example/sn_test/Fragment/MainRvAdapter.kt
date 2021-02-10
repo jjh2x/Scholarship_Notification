@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sn_test.R
 
-class MainRvAdapter(val context : Context, val summaryList : ArrayList<ScholarshipSummary>) :
+class MainRvAdapter(val context : Context, val summarySummary : ArrayList<ScholarshipSummary>) :
         RecyclerView.Adapter<MainRvAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -17,11 +17,11 @@ class MainRvAdapter(val context : Context, val summaryList : ArrayList<Scholarsh
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(summaryList[position], context)
+        holder?.bind(summarySummary[position], context)
     }
 
     override fun getItemCount(): Int {
-        return summaryList.size
+        return summarySummary.size
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
