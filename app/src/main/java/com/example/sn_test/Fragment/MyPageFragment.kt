@@ -14,6 +14,6 @@ class MyPageFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_mypage, container, false)
+        return inflater.inflate(R.layout.fragment_myfav, container, false)
     }
 }
