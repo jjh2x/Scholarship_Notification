@@ -43,7 +43,6 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="34dp"
             android:layout_height="34dp"
-            android:background="@drawable/action_bar_item_background_material"
             app:icon="@android:drawable/ic_menu_search"
             app:layout_constraintBottom_toBottomOf="@+id/Text_input"
             app:layout_constraintStart_toEndOf="@+id/Text_input"
