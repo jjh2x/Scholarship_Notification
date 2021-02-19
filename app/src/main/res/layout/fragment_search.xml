@@ -8,7 +8,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="134.11dp">
+        android:layout_height="134.11dp"
+        android:background="#7687FA"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/sch_list"
@@ -16,91 +18,101 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="296dp"
-            android:text="장학금 리스트"
+            android:text="장학금 찾기"
+            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/Text_input"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/Text_input"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.452" />
 
         <EditText
             android:id="@+id/Text_input"
-            android:layout_width="250dp"
-            android:layout_height="34dp"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
             android:layout_marginStart="34dp"
-            android:layout_marginEnd="77dp"
-            android:ems="10"
+            android:background="#FFFFFF"
             android:inputType="textPersonName"
             android:text="Name"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.68" />
 
-        <Button
+        <ImageView
             android:id="@+id/btn_search"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            app:icon="@android:drawable/ic_menu_search"
+            android:layout_width="28dp"
+            android:layout_height="45dp"
+            android:background="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/Text_input"
+            app:layout_constraintEnd_toEndOf="@+id/Text_input"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/Text_input"
             app:layout_constraintTop_toTopOf="@+id/Text_input"
-            app:layout_constraintVertical_bias="0.0"
-            app:rippleColor="#4F5254" />
+            app:layout_constraintVertical_bias="0.363"
+            app:srcCompat="@android:drawable/ic_search_category_default" />
 
         <Button
             android:id="@+id/btn_filter"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_marginEnd="32dp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/Text_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/Text_input"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="85dp"
+        android:background="#F5F6FF">
 
         <Button
             android:id="@+id/btn_in"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="34dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btn_in"
             android:text="교내 장학생"
+            android:textColor="@color/text_btn_search"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.513" />
 
         <Button
             android:id="@+id/btn_out"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_in"
             android:text="교외 장학생"
+            android:textColor="@color/text_btn_search"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_serve"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.528"
             app:layout_constraintStart_toEndOf="@+id/btn_in"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_serve"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btn_serve"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="34dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_in"
             android:text="봉사 장학생"
+            android:textColor="@color/text_btn_search"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.513" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Search_View"
