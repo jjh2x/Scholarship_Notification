@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sn_test.Adpater.MainRvAdapter
 import com.example.sn_test.R
 
 class CollectionFragment: Fragment() {
@@ -27,10 +28,13 @@ class CollectionFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_collection, container, false)
-        recyclerView = rootView.findViewById(R.id.recyclerView!!) as RecyclerView
+        recyclerView = rootView.findViewById(R.id.recyclerView_collection!!) as RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val mAdapter = MainRvAdapter(requireContext(), summaryList)
+        val mAdapter = MainRvAdapter(
+            requireContext(),
+            summaryList
+        )
         recyclerView.adapter = mAdapter
         recyclerView.setHasFixedSize(true)
         return rootView

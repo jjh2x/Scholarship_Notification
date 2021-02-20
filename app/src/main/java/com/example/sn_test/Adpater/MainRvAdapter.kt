@@ -1,4 +1,4 @@
-package com.example.sn_test.Fragment
+package com.example.sn_test.Adpater
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sn_test.Fragment.ScholarshipSummary
 import com.example.sn_test.R
 
-class MainRvAdapter(val context : Context, val summarySummary : ArrayList<ScholarshipSummary>) :
+class MainRvAdapter(private val context : Context, val summarySummary : ArrayList<ScholarshipSummary>) :
         RecyclerView.Adapter<MainRvAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {

@@ -24,10 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         tl_ac_main_bottom_menu = findViewById<TabLayout>(R.id.tl_ac_main_bottom_menu)
         tl_ac_main_bottom_menu.setupWithViewPager(vp_ac_main_frag_pager)
-
-        val bottomNaviLayout: View =
-            this.layoutInflater.inflate(R.layout.bottom_navigation_tab, null, false)
-
+        
         // 탭 레이아웃의 각 탭과 탭의 외형을 담당하는 xml과 연결하는 구문.
         tl_ac_main_bottom_menu.getTabAt(0)?.setIcon(R.drawable.ic_navi_cal)
         tl_ac_main_bottom_menu.getTabAt(1)?.setIcon(R.drawable.ic_navi_col)
