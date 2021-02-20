@@ -12,7 +12,7 @@ class MainRvAdapter(val context : Context, val summarySummary : ArrayList<Schola
         RecyclerView.Adapter<MainRvAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.lv_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.listview_item, parent, false)
         return Holder(view)
     }
 
@@ -25,14 +25,18 @@ class MainRvAdapter(val context : Context, val summarySummary : ArrayList<Schola
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
-        val scholarshipName = itemView?.findViewById<TextView>(R.id.itemTV_ScholarshipName)
-        val period = itemView?.findViewById<TextView>(R.id.itemTV_Period)
-        val amountPaid = itemView?.findViewById<TextView>(R.id.itemTV_AmountPaid)
+        val dow = itemView?.findViewById<TextView>(R.id.itemTV_DOW)
+        val day = itemView?.findViewById<TextView>(R.id.itemTV_Day)
+        val scholarshipName = itemView?.findViewById<TextView>(R.id.itemTV_scholarName)
+        val organization = itemView?.findViewById<TextView>(R.id.itemTV_scholarOrganization)
+        val d_day = itemView?.findViewById<TextView>(R.id.itemTV_scholarD_day)
 
         fun bind (scholarshipSummary: ScholarshipSummary, context: Context) {
+            dow?.text = scholarshipSummary.dow
+            day?.text = scholarshipSummary.day
             scholarshipName?.text = scholarshipSummary.scholarName
-            period?.text = scholarshipSummary.period
-            amountPaid?.text = scholarshipSummary.amountPaid
+            organization?.text = scholarshipSummary.organization
+            d_day?.text = scholarshipSummary.d_day
         }
     }
 }
