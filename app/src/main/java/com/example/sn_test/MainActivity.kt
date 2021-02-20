@@ -27,13 +27,11 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNaviLayout: View =
             this.layoutInflater.inflate(R.layout.bottom_navigation_tab, null, false)
-        tl_ac_main_bottom_menu.getTabAt(0)!!.customView =
-            bottomNaviLayout.findViewById(R.id.btn_bottom_navi_home)
-        tl_ac_main_bottom_menu.getTabAt(1)!!.customView =
-            bottomNaviLayout.findViewById(R.id.btn_bottom_navi_collection)
-        tl_ac_main_bottom_menu.getTabAt(2)!!.customView =
-            bottomNaviLayout.findViewById(R.id.btn_bottom_navi_search)
-        tl_ac_main_bottom_menu.getTabAt(3)!!.customView =
-            bottomNaviLayout.findViewById(R.id.btn_bottom_navi_myPage)
+
+        // 탭 레이아웃의 각 탭과 탭의 외형을 담당하는 xml과 연결하는 구문.
+        tl_ac_main_bottom_menu.getTabAt(0)?.setIcon(R.drawable.ic_navi_cal)
+        tl_ac_main_bottom_menu.getTabAt(1)?.setIcon(R.drawable.ic_navi_col)
+        tl_ac_main_bottom_menu.getTabAt(2)?.setIcon(R.drawable.ic_navi_search)
+        tl_ac_main_bottom_menu.getTabAt(3)?.setIcon(R.drawable.ic_navi_heart)
     }
 }
