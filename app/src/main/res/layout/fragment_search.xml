@@ -9,8 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="134.11dp"
-        android:background="#7687FA"
-        android:visibility="visible">
+        android:background="#7687FA">
 
         <TextView
             android:id="@+id/sch_list"
@@ -53,15 +52,16 @@
             app:layout_constraintVertical_bias="0.363"
             app:srcCompat="@android:drawable/ic_search_category_default" />
 
-        <Button
-            android:id="@+id/btn_filter"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="4dp"
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             app:layout_constraintBottom_toBottomOf="@+id/Text_input"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Text_input"
             app:layout_constraintTop_toTopOf="@+id/Text_input"
-            app:layout_constraintVertical_bias="0.0" />
+            app:srcCompat="@drawable/btn_filter" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
