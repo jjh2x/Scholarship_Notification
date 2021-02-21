@@ -15,7 +15,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="105dp">
+        android:layout_height="105dp"
+        android:background="@drawable/frag_shape">
 
         <TextView
             android:id="@+id/myshedule"
@@ -24,6 +25,7 @@
             android:layout_marginStart="34dp"
             android:layout_marginEnd="299dp"
             android:text="나의 장학금"
+            android:textColor="#FFFFFF"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
