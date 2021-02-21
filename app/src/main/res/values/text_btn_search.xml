@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <color name="text_btn_search">#FFFFFFFF</color>>
-    <text android:state_pressed="true" android:color="@color/main_purple"/>
-</resources>
