@@ -21,7 +21,7 @@
     android:viewportWidth="32"
     android:height="32dp"
     android:viewportHeight="32"
-    android:tint="@color/control_checkable_material">
+    android:tint="@color/black">
     <group
         android:name="btn_radio_to_off_mtrl_0"
         android:translateX="16"
