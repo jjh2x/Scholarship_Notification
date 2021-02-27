@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sn_test.Adpater.SearchRvAdapter
 import com.example.sn_test.R
 
 class SearchFragment: Fragment() {
-    var SchList = arrayListOf<Sch_List> (
+    var schList = arrayListOf<Sch_List> (
         Sch_List("장학금1", "분류조건1"),
         Sch_List("장학금2", "분류조건2"),
         Sch_List("장학금3", "분류조건3"),
@@ -19,7 +20,7 @@ class SearchFragment: Fragment() {
         Sch_List("장학금6", "분류조건6"),
         Sch_List("장학금7", "분류조건7")
     )
-    lateinit var recyclerView: RecyclerView
+    lateinit var recyclerview_sch: RecyclerView
 
 
     override fun onCreateView(
@@ -27,14 +28,16 @@ class SearchFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_search, container, false)
         var rootView_search = inflater.inflate(R.layout.fragment_search, container, false)
-        recyclerView = rootView_search.findViewById(R.id.sch_list!!) as RecyclerView
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerview_sch = rootView_search.findViewById(R.id.recyclerview_Search!!) as RecyclerView
+        recyclerview_sch.layoutManager = LinearLayoutManager(requireContext())
 
-        val mAdapter = SearchRvAdapter(requireContext(), SchList)
-        recyclerView.adapter = mAdapter
-        recyclerView.setHasFixedSize(true)
+        val mAdapter = SearchRvAdapter(
+            requireContext(),
+            schList
+        )
+        recyclerview_sch.adapter = mAdapter
+        recyclerview_sch.setHasFixedSize(true)
         return rootView_search
     }
 }
