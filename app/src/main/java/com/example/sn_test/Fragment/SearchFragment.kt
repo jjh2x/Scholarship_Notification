@@ -32,11 +32,11 @@ class SearchFragment: Fragment() {
         recyclerview_sch = rootView_search.findViewById(R.id.recyclerview_Search!!) as RecyclerView
         recyclerview_sch.layoutManager = LinearLayoutManager(requireContext())
 
-        val mAdapter = SearchRvAdapter(
+        val sAdapter = SearchRvAdapter(
             requireContext(),
             schList
         )
-        recyclerview_sch.adapter = mAdapter
+        recyclerview_sch.adapter = sAdapter
         recyclerview_sch.setHasFixedSize(true)
         return rootView_search
     }
