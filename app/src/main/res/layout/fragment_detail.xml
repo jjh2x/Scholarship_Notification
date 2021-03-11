@@ -5,7 +5,8 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#FAFAFA"
+    android:backgroundTint="#FAFAFA">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -46,9 +47,11 @@
         android:layout_height="414dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/frag_shape_detail"
+        android:elevation="6dp"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
@@ -104,5 +107,18 @@
             android:textSize="15sp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/ic____107" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
