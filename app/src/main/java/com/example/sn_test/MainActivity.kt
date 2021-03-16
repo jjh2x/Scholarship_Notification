@@ -2,10 +2,16 @@ package com.example.sn_test
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.viewpager.widget.ViewPager
 import com.example.sn_test.Adpater.MainFragmentStatePAgerAdapter
 import com.google.android.material.tabs.TabLayout
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     lateinit var vp_ac_main_frag_pager: ViewPager
@@ -16,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         configureBottomNavigation()
+
+        //여기서부터 retrofit 관련
+
     }
 
     private fun configureBottomNavigation() {
@@ -31,4 +40,6 @@ class MainActivity : AppCompatActivity() {
         tl_ac_main_bottom_menu.getTabAt(2)?.setIcon(R.drawable.ic_navi_search)
         tl_ac_main_bottom_menu.getTabAt(3)?.setIcon(R.drawable.ic_navi_heart)
     }
+
+
 }
