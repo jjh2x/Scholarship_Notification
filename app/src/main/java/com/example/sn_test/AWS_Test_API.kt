@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface AWS_Test_API {
-    @GET("/scholarship")
+    @GET("/user/scholarship")
     fun getScholarshipInformation(
 
     ): Call<List<ResultGetScholarshipInformation>>

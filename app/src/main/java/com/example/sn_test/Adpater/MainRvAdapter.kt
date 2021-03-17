@@ -13,6 +13,7 @@ class MainRvAdapter(private val context : Context, val summarySummary : ArrayLis
         RecyclerView.Adapter<MainRvAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+        // 리사이클러뷰에 들어가는 아이템에 해당하는 xml
         val view = LayoutInflater.from(context).inflate(R.layout.listview_item, parent, false)
         return Holder(view)
     }

@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import com.example.sn_test.AWS_Test_API
 import com.example.sn_test.R
 import com.example.sn_test.ResultGetScholarshipInformation
-import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -18,16 +17,25 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class HomeFragment : Fragment() {
-    private lateinit var tv_Period: TextView
+    private lateinit var tv_Major: TextView
+    private lateinit var tv_Title: TextView
+    private lateinit var tv_Link: TextView
+    private lateinit var tv_Writetime: TextView
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         var rootView_Home = inflater.inflate(R.layout.fragment_home, container, false)
-        tv_Period = rootView_Home.findViewById<TextView>(R.id.tv_Period)
+
+        tv_Major = rootView_Home.findViewById<TextView>(R.id.tv_Major)
+        tv_Title = rootView_Home.findViewById<TextView>(R.id.tv_Title)
+        tv_Link = rootView_Home.findViewById<TextView>(R.id.tv_Link)
+        tv_Writetime = rootView_Home.findViewById<TextView>(R.id.tv_Writetime)
+
         val builder: Retrofit.Builder = Retrofit.Builder()
-            .baseUrl("http://3.36.171.36:9000/user/")
+            .baseUrl("http://3.36.171.36:9000/")
             .addConverterFactory(GsonConverterFactory.create())
 
         val retrofit: Retrofit = builder.build()
@@ -50,9 +58,11 @@ class HomeFragment : Fragment() {
                 var reposStr = ""
 
                 repos?.forEach{ it ->
-                    reposStr += "$it\n"
+                    tv_Major.text = "${it.major}\n"
+                    tv_Title.text = "${it.title}\n"
+                    tv_Link.text = "${it.link}\n"
+                    tv_Writetime.text = "${it.writeTime}\n"
                 }
-                tv_Period.text = reposStr
             }
         })
         return rootView_Home
