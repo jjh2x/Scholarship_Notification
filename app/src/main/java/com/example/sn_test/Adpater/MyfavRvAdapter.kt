@@ -26,7 +26,7 @@ class MyfavRvAdapter (private val context: Context, val myfavList:ArrayList<Myfa
     override fun getItemCount(): Int {
         return myfavList.size
     }
-    inner class Holder(itemView: View?) {
+    inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val myfav_name = itemView?.findViewById<TextView>(R.id.itemTV_Myfav_nameCall)
         val myfav_sort = itemView?.findViewById<TextView>(R.id.itemTV_Myfav_criteria)
 
