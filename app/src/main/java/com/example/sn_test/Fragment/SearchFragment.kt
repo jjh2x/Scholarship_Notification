@@ -12,10 +12,6 @@ import com.example.sn_test.Adpater.SearchRvAdapter
 import com.example.sn_test.R
 
 class SearchFragment : Fragment() {
-    lateinit var btn_in: Button
-    lateinit var btn_out: Button
-    lateinit var btn_serve: Button
-
     var schList = arrayListOf<Sch_List>(
         Sch_List("장학금1", "분류조건1"),
         Sch_List("장학금2", "분류조건2"),
@@ -25,8 +21,11 @@ class SearchFragment : Fragment() {
         Sch_List("장학금6", "분류조건6"),
         Sch_List("장학금7", "분류조건7")
     )
-    lateinit var recyclerview_sch: RecyclerView
+    private lateinit var recyclerviewSch: RecyclerView
 
+    private lateinit var btn_in: Button
+    private lateinit var btn_out: Button
+    private lateinit var btn_serve: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,15 +34,15 @@ class SearchFragment : Fragment() {
     ): View? {
         //리싸이클러뷰 관련
         var rootView_search = inflater.inflate(R.layout.fragment_search, container, false)
-        recyclerview_sch = rootView_search.findViewById(R.id.recyclerview_Search!!) as RecyclerView
-        recyclerview_sch.layoutManager = LinearLayoutManager(requireContext())
+        recyclerviewSch = rootView_search.findViewById(R.id.recyclerview_Search!!) as RecyclerView
+        recyclerviewSch.layoutManager = LinearLayoutManager(requireContext())
 
         val sAdapter = SearchRvAdapter(
             requireContext(),
             schList
         )
-        recyclerview_sch.adapter = sAdapter
-        recyclerview_sch.setHasFixedSize(true)
+        recyclerviewSch.adapter = sAdapter
+        recyclerviewSch.setHasFixedSize(true)
         //리싸이클러뷰 관련
 
         // 교내장학생 버튼 눌리면 진행되는 동작

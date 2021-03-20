@@ -23,7 +23,6 @@ class SearchRvAdapter(private val context: Context, val schList: ArrayList<Sch_L
 
     override fun getItemCount(): Int {
         return schList.size
-
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
