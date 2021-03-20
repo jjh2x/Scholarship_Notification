@@ -32,7 +32,9 @@ class SearchRvAdapter(private val context: Context, val schList: ArrayList<Sch_L
         fun bind(sch_List: Sch_List, context: Context) {
             sch_name_call?.text = sch_List.sch_name
             sch_criteria?.text = sch_List.sch_sort
+
         }
+
     }
 
 }

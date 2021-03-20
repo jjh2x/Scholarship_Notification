@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sn_test.Fragment.Myfav_List
-import com.example.sn_test.Fragment.Sch_List
 import com.example.sn_test.R
-import com.example.sn_test.Adpater.MyfavRvAdapter as MyfavRvAdapter
 
 class MyfavRvAdapter (private val context: Context, val myfavList:ArrayList<Myfav_List>):
     RecyclerView.Adapter<MyfavRvAdapter.Holder>() {
@@ -23,9 +21,9 @@ class MyfavRvAdapter (private val context: Context, val myfavList:ArrayList<Myfa
         holder?.bind(myfavList[position], context)
     }
 
-    override fun getItemCount(): Int {
-        return myfavList.size
-    }
+    override fun getItemCount() =  myfavList.size
+
+
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
         val myfav_name = itemView?.findViewById<TextView>(R.id.itemTV_Myfav_nameCall)
         val myfav_sort = itemView?.findViewById<TextView>(R.id.itemTV_Myfav_criteria)

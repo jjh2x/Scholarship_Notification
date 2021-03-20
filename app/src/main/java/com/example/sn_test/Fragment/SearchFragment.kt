@@ -13,7 +13,6 @@ import com.example.sn_test.R
 
 class SearchFragment : Fragment() {
     var schList = arrayListOf<Sch_List>(
-        Sch_List("장학금1", "분류조건1"),
         Sch_List("장학금2", "분류조건2"),
         Sch_List("장학금3", "분류조건3"),
         Sch_List("장학금4", "분류조건4"),
@@ -50,22 +49,22 @@ class SearchFragment : Fragment() {
         btn_in.setOnClickListener() {
 
             //sortedSetOf() 버튼 누르면 sort로 정렬해야함
+            btn_in.isSelected()
 
-            btn_in.setBackgroundColor(R.drawable.btn_in_clicked)
         }
 
         // 교외장학생 버튼 눌리면 진행되는 동작
         btn_out = rootView_search.findViewById<Button>(R.id.btn_out)
         btn_out.setOnClickListener() {
             //sortedSetOf() 버튼 누르면 sort로 정렬해야함 Sch_criteria or sch_sort로 정렬?? //
-            btn_out.setBackgroundColor(R.drawable.btn_in_clicked)
+            btn_out.isSelected()
         }
 
         // 봉사장학생 버튼 눌리면 진행되는 동작
         btn_serve = rootView_search.findViewById<Button>(R.id.btn_serve)
         btn_serve.setOnClickListener() {
             //sortedSetOf() 버튼 누르면 sort로 정렬해야함
-            btn_serve.setBackgroundColor(R.drawable.btn_in_clicked)
+            btn_serve.isSelected()
         }
 
         return rootView_search
